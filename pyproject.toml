@@ -1,14 +1,11 @@
-[tool.poetry]
-name = "my-project"
-version = "0.1.0"
-description = ""
-authors = ["Artorias1469 <pupas5676@gmail.com>"]
-readme = "README.md"
+[tool.black]
+line-length = 79
+exclude = '''
+(
+    __pycache__
+)
+'''
 
-[tool.poetry.dependencies]
-python = "^3.9"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.flake8]
+max-line-length = 79
+extend-exclude = '__pycache__'
